@@ -111,24 +111,30 @@ cartButtons.forEach(button => {
 });
 
 // Clear cart logic
-clearBtn.addEventListener('click', () => {
-    // 1. Reset the logic variables (Floats and Integers)
-    itemCount = 0;
-    totalPrice = 0.00;
+if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+        // 1. Reset the logic variables (Floats and Integers)
+        itemCount = 0;
+        totalPrice = 0.00;
 
-    // 2. Update the main UI displays
-    cartCountDisplay.innerText = itemCount;
-    cartTotalDisplay.innerText = totalPrice.toFixed(2);
-    
-    // 3. Update the overlay total
-    document.getElementById('overlay-total').innerText = "0.00";
+        // 2. Update the main UI displays
+        cartCountDisplay.innerText = itemCount;
+        cartTotalDisplay.innerText = totalPrice.toFixed(2);
+        
+        // 3. Update the overlay total
+        const overlayTotal = document.getElementById('overlay-total');
+        if (overlayTotal) {
+            overlayTotal.innerText = "0.00";
+        }
 
-    // 4. FIX: Clear the actual HTML list so old items don't stay visible
-    // This removes all 'p' tags we appended earlier
-    cartItemsContainer.innerHTML = ""; 
+        // 4. FIX: Clear the actual HTML list so old items don't stay visible
+        if (cartItemsContainer) {
+            cartItemsContainer.innerHTML = ""; 
+        }
 
-    console.log("Cart has been fully purged.");
-});
+        console.log("Cart has been fully purged.");
+    });
+}
 
 const overlay = document.getElementById('cart-overlay');
 const viewCartBtn = document.getElementById('view-cart-btn');
