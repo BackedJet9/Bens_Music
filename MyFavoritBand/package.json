@@ -1,0 +1,12 @@
+{
+  "name": "bensbandwebsite",
+  "version": "1.0.0",
+  "description": "ICS4U King Gizzard Fan Site",
+  "main": "script.js",
+  "scripts": {
+    "start": "start pages/homePage.html", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben F",
+  "license": "ISC"
+}

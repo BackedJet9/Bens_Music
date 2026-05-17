@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Gizzard | About</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/about.css">
+</head>
+<body>
+
+    <!-- user navigation  -->
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../Images/kinkingGizzardThelizardlogo.png" alt="Logo" height="30">
+                <span>KGLW</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href="aboutPage.html" class="active">About</a></li>
+                <li><a href="storePage.html">Store</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main content of the about page, band history and a video highlight -->
+    <main class="about-container">
+        <section class="about-content">
+            <h1>The Weirdo Swarm</h1>
+            <p>Formed in Melbourne, Australia in 2010, King Gizzard & The Lizard Wizard are known for their explosive live shows and prolific recording schedule, having released over 25 studio albums in just over a decade.</p>
+            
+            <div class="bio-grid">
+                <div class="bio-text">
+                    <h3>Musical Evolution</h3>
+                    <p>From surf-rock beginnings to microtonal experiments and thrash metal, the band refuses to be pinned down to a single genre. This site explores their transition into the "Gizzverse" a connected lyrical universe.</p>
+                </div>
+                <div class="bio-image">
+                    <img src="../Images/bandPhoto.jpg" alt="King Gizzard performing live" class="responsive-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- media highlight section with an embedded YouTube video -->
+        <section class="media-highlight">
+            <h2>Live Performance</h2>
+            <div class="video-wrapper">
+                <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/TP1u3FnzH-A?si=atNN7XVGGv2GenLU" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="tour-dates">
+    <h2>Upcoming Tour Dates</h2>
+    <table class="tour-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Venue</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aug 14, 2026</td>
+                <td>Meadow Creek</td>
+                <td>Buena Vista, CO</td>
+            </tr>
+            <tr>
+                <td>Aug 20, 2026</td>
+                <td>Forest Hills Stadium</td>
+                <td>Forest Hills, NY</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section class="newsletter-section">
+    <h3>Join the Mailing List</h3>
+    <form id="mailing-list">
+        <input type="text" placeholder="Your Name" id="user-name" required>
+        <input type="email" placeholder="Email Address" id="user-email" required>
+        <button type="submit" class="cta-button">Sign Up</button>
+    </form>
+</section>
+
+<section class="ethics-statement">
+    <hr>
+    <h4>Digital Citizenship & Ethical Considerations (ICS4U D2)</h4>
+    <p>All media (images/audio) on this site are the intellectual property of King Gizzard & The Lizard Wizard. This project is created for educational purposes under Fair Use. User data collected via the mailing list is stored locally for demonstration and would be encrypted in a production environment to ensure privacy.</p>
+</section>
+        <p>&copy; 2026 Ben F | ICS4U </p>
+    </footer>
+
+    <script src="../script.js" defer></script>
+</body>
+</html>

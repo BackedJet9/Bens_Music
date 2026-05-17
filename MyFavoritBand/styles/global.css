@@ -1,0 +1,105 @@
+/* GLOBAL STYLES - 100% Preserved from your code */
+:root {
+    --primary-red: #b30000;
+    --dark-bg: #ba1818;
+    --text-light: #f4f4f4;
+    --accent-gold: #ffd700;
+    --js-purple: #f7df1e; /* JS Yellow/Purple theme color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    background: linear-gradient(rgba(186, 24, 24, 1) 0%, rgba(36, 9, 9, 1) 25%, rgba(57, 31, 17, 1) 60%, rgba(237, 221, 83, 1) 100%);
+    color: var(--text-light);
+    line-height: 1.6;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%; 
+    background: #000;
+    width: 100%;
+}
+
+.logo {
+    display: flex; 
+    align-items: center; 
+    gap: 1vw;
+    color: var(--accent-gold);
+}
+
+.logo img { height: 4vh; }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 2vw; }
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.1rem;
+}
+.nav-links a:hover, .active { color: var(--accent-gold); }
+
+/* Footer Sections (Tour & Mailing List) */
+footer { padding: 3% 0; text-align: center; background: #111; }
+
+.tour-table {
+    width: 90%;
+    margin: 2% auto;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.tour-table th, .tour-table td {
+    padding: 1.5%;
+    border-bottom: 1px solid var(--accent-gold);
+    text-align: left;
+}
+
+#mailing-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5% 2%;
+    width: 60%;
+    margin: 2% auto;
+}
+
+#mailing-list input {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.5%;
+    border-radius: 5px;
+    border: none;
+}
+
+#mailing-list button.cta-button {
+    width: 100%;
+    padding: 1.5%;
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#mailing-list button.cta-button:hover {
+    outline: 1px solid var(--accent-gold);
+    transform: translateY(-1%);
+}
+
+.ethics-statement { width: 80%; margin: 5% auto; font-size: 0.9rem; color: #aaa; }

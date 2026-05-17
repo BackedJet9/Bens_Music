@@ -1,0 +1,16 @@
+/* ABOUT PAGE STYLES */
+.about-container { width: 80%; margin: 5% auto; line-height: 1.8; }
+.bio-grid { display: flex; flex-wrap: wrap; gap: 5%; margin-top: 3%; }
+.bio-text, .bio-image { flex: 1; min-width: 300px; }
+
+.responsive-img {
+    width: 100%; height: auto; border-radius: 10px;
+    border: 2px solid var(--accent-gold);
+}
+
+.video-wrapper {
+    position: relative; padding-bottom: 56.25%; /* 16:9 Ratio */
+    height: 0; width: 100%; border: 2px solid var(--accent-gold);
+}
+
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
