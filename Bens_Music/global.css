@@ -109,11 +109,17 @@ footer {
     letter-spacing: 1px;
 }
 
-.concert-table th,
-.concert-table td {
+.tour-table th,
+.tour-table td {
     padding: 1.5%;
     border-bottom: 1px solid rgba(67, 92, 56, 0.3);
     text-align: left;
+}
+
+/* FORCED COLUMN GAP: Puts a permanent margin/gap to the left of the columns */
+.tour-table th:not(:first-child),
+.tour-table td:not(:first-child) {
+    padding-left: 30px; /* Adjust this number higher or lower to get the exact gap size you want */
 }
 
 .concert-table tr:hover {
@@ -205,5 +211,15 @@ footer {
     /* Make sure form elements clamp inside the screen border */
     #mailing-list {
         width: 90%;
+    }
+        /* Optimize the table spacing for small screens */
+    .tour-table {
+        width: 100%; /* Take up full container width to maximize horizontal real estate */
+        font-size: 0.85rem; /* Scales text down slightly so long names don't clash */
+    }
+
+    .tour-table th,
+    .tour-table td {
+        padding: 8px 6px; /* Uses reliable static pixel padding on micro displays */
     }
 }
