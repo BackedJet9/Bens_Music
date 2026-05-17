@@ -1,16 +1,87 @@
-/* ABOUT PAGE STYLES */
-.about-container { width: 80%; margin: 5% auto; line-height: 1.8; }
-.bio-grid { display: flex; flex-wrap: wrap; gap: 5%; margin-top: 3%; }
-.bio-text, .bio-image { flex: 1; min-width: 300px; }
+/* ABOUT PAGE SPECIFIC STYLES */
 
-.responsive-img {
-    width: 100%; height: auto; border-radius: 10px;
-    border: 2px solid var(--accent-gold);
+.about-hero h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--accent-neon);
+    margin-bottom: 1%;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
 }
 
-.video-wrapper {
-    position: relative; padding-bottom: 56.25%; /* 16:9 Ratio */
-    height: 0; width: 100%; border: 2px solid var(--accent-gold);
+.about-hero p {
+    font-style: italic;
+    color: #7b8875;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
-.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.about-content {
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.about-image-container {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 3%;
+}
+
+/* Plant Punk framing style for your personal profile picture/graphic */
+.about-image-frame {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 2px solid var(--primary-moss);
+    background: var(--industrial-gray);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.about-image-frame:hover {
+    outline: 1px solid var(--accent-neon);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.15);
+}
+
+.about-text {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    color: var(--accent-neon);
+    margin-bottom: 3%;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.about-text p {
+    margin-bottom: 4%;
+    color: var(--text-ash);
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+.about-main-container {
+    padding: 5% 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ethics-divider {
+    border-color: var(--primary-moss);
+    margin-bottom: 2%;
+}
+
+.copyright-tag {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 2%;
+}

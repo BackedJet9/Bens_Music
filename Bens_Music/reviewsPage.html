@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Reviews | Home</title>
+    <title>Reviews Archive | Overgrown Audio</title>
     <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./reviews.css">
 </head>
 
 <body>
@@ -15,50 +15,35 @@
         <nav class="navbar">
             <div class="logo">
                 <img src="./Images/Bens-Music-logo.svg" alt="Ben's Music Logo">
-                <span>OVERGROWN AUDIO</span> <!-- Add your site title/name here -->
+                <span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="./homePage.html" class="active">Home</a></li>
+                <li><a href="./homePage.html">Home</a></li>
                 <li><a href="./aboutPage.html">About</a></li>
-                <li><a href="./reviewsPage.html">Reviews</a></li>
+                <li><a href="./reviewsPage.html" class="active">Reviews</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>OVERGROWN AUDIO</h1> <!-- Main Site Heading -->
-                <p>Exploring the sounds of the underground</p> <!-- Subtitle / Tagline -->
-                <a href="#latest-reviews" class="cta-button" onclick="window.location.href='./reviewsPage.html'">Latest
-                    Reviews</a> <!-- Button Text -->
+        <!-- Page Title & Navigation Filters -->
+        <section class="archive-header">
+            <h1></h1> <!-- Page Heading (e.g., "The Sonic Vault") -->
+
+            <!-- Genre Filter Row for navigation -->
+            <div class="genre-filters">
+                <span class="active-filter">All</span>
+                <span>Rock</span>
+                <span>Metal</span>
+                <span>Electronic</span>
             </div>
         </section>
 
-        <!-- Main Reviews Grid -->
-        <section class="featured-media" id="latest-reviews">
-            <h2>Latest Reviews</h2> <!-- Section Title (e.g., "Recent Reviews") -->
-            <div class="song-grid">
+        <!-- Full Library Grid -->
+        <section class="featured-media">
+            <div class="song-grid archive-grid-spacing">
 
-                <!-- Review Card 1 -->
-                <article class="song-card">
-                    <img src="" alt="" class="album-art">
-                    <h3></h3> <!-- Song/Album Title -->
-                    <p class="review-artist"></p> <!-- Artist Name -->
-                    <p class="review-snippet"></p> <!-- Your Review Write-up -->
-                    <div class="custom-player">
-                        <button class="p-btn play-trigger" aria-label="Play sample">▶</button>
-                        <div class="progress-bar-bg">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <audio class="song-audio">
-                            <source src="" type="audio/mpeg">
-                        </audio>
-                    </div>
-                </article>
-
-                <!-- Review Card 2 -->
+                <!-- Review Shell Card 1 -->
                 <article class="song-card">
                     <img src="" alt="" class="album-art">
                     <h3></h3>
@@ -75,7 +60,41 @@
                     </div>
                 </article>
 
-                <!-- Review Card 3 -->
+                <!-- Review Shell Card 2 -->
+                <article class="song-card">
+                    <img src="" alt="" class="album-art">
+                    <h3></h3>
+                    <p class="review-artist"></p>
+                    <p class="review-snippet"></p>
+                    <div class="custom-player">
+                        <button class="p-btn play-trigger" aria-label="Play sample">▶</button>
+                        <div class="progress-bar-bg">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <audio class="song-audio">
+                            <source src="" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </article>
+
+                <!-- Review Shell Card 3 -->
+                <article class="song-card">
+                    <img src="" alt="" class="album-art">
+                    <h3></h3>
+                    <p class="review-artist"></p>
+                    <p class="review-snippet"></p>
+                    <div class="custom-player">
+                        <button class="p-btn play-trigger" aria-label="Play sample">▶</button>
+                        <div class="progress-bar-bg">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <audio class="song-audio">
+                            <source src="" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </article>
+
+                <!-- Review Shell Card 4 -->
                 <article class="song-card">
                     <img src="" alt="" class="album-art">
                     <h3></h3>
@@ -98,58 +117,16 @@
 
     <!-- Footer Content -->
     <footer>
-        <!-- My Concert Attendance Dates -->
-        <section class="concert-dates">
-            <h2></h2> <!-- Table Heading -->
-            <table class="concert-table">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Artist</th>
-                        <th>Venue/Location</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>07/09/2025</td> <!-- Concert Date -->
-                        <td>Deftones, Idoles, TBOC</td> <!-- Artist -->
-                        <td>Montreal</td> <!-- Venue/Location -->
-                    </tr>
-                    <tr>
-                        <td>17/09/2025</td> <!-- Concert Date -->
-                        <td>Korn, Gojira, Loath</td> <!-- Artist -->
-                        <td>Canadian Tire Center</td> <!-- Venue/Location -->
-                    </tr>
-                    <tr>
-                        <td>07/11/2025</td>
-                        <td>Insomniak, Public Health, White Duchess</td>
-                        <td>Toronto</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Newsletter Sign-up -->
-        <section class="newsletter-section">
-            <h3></h3> <!-- Sign-up Form Title -->
-            <form id="mailing-list">
-                <input type="text" placeholder="Your Name" id="user-name" required>
-                <input type="email" placeholder="Email Address" id="user-email" required>
-                <button type="submit" class="cta-button">Sign-up</button> <!-- Submit Button Text -->
-            </form>
-        </section>
-
         <!-- Ethics Statement for ICS4U -->
         <section class="ethics-statement">
-            <hr style="border-color: var(--accent-gold); margin-bottom: 2%;">
+            <hr class="ethics-divider">
             <h4>Digital Citizenship & Ethical Considerations (ICS4U D2)</h4>
             <p>All media (images/audio) displayed on this site are the intellectual property of their respective
                 creators. This project is developed strictly for educational review and commentary under Fair Use
                 guidelines. User data captured via the newsletter form is retained locally for project demonstration and
                 would be completely encrypted in a live production environment to protect user privacy.</p>
         </section>
-
-        <p style="font-size: 0.85rem; color: #777; margin-top: 2%;">&copy; 2026 Ben F | ICS4U </p>
+        <p class="copyright-tag">&copy; 2026 Ben F | ICS4U </p>
     </footer>
 
     <script src="./script.js" defer></script>

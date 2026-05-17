@@ -1,20 +1,35 @@
 /* HOME PAGE STYLES */
 /* This file contains styles specific to the home page, including the hero section, featured tracks,
-/* FIXED: Centering the Feature Tracks header */ 
+/* FIXED: Centering the Feature Tracks header */
+
+:root {
+    --primary-red: #395B24;
+    /* Deep Moss/Army Green */
+    --dark-bg: #111610;
+    /* Muddy, almost-black forest green shadow */
+    --text-light: #E1E8DE;
+    /* Pale sage/ash white */
+    --accent-gold: #39FF14;
+    /* Violent Neon/Radioactive Plant Green */
+    --js-purple: #1b2e1a;
+    /* Dark accent shadow green */
+}
+
 .featured-media h2 {
     text-align: center;
     width: 100%;
     margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 .hero-section {
-    height: 60vh; 
+    height: 20vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Images/hero-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -23,9 +38,9 @@
 /* FIXED: Hero Button with JS Purple/Yellow Theme */
 .hero-section .cta-button {
     display: inline-block;
-    padding: 1.5% 4%; 
-    background: var(--primary-red); 
-    color: white;      
+    padding: 1.5% 4%;
+    background: var(--primary-red);
+    color: white;
     text-decoration: none;
     margin-top: 2%;
     border-radius: 5px;
@@ -47,9 +62,9 @@
 
 .song-card {
     background: #222;
-    padding: 2%; 
+    padding: 2%;
     border-radius: 10px;
-    width: 28%; 
+    width: 28%;
     min-width: 280px;
     margin-bottom: 3%;
     transition: all 0.3s ease;
@@ -61,7 +76,7 @@
 }
 
 .album-art {
-    width: 100%; 
+    width: 100%;
     border: 0.5vw solid #333;
     margin-bottom: 5%;
 }
@@ -71,14 +86,34 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%; padding: 5% 0; gap: 5%; 
+    width: 100%;
+    padding: 5% 0;
+    gap: 5%;
 }
 
 .p-btn {
-    width: 15%; aspect-ratio: 1/1; border-radius: 40%;
-    background: var(--primary-red); color: white; border: none;
-    font-size: 1.5rem; display: flex; align-items: center; justify-content: center;
+    width: 15%;
+    aspect-ratio: 1/1;
+    border-radius: 40%;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.progress-bar-bg { flex-grow: 1; height: 8px; background: #444; border-radius: 10px; }
-.progress-fill { width: 0%; height: 100%; background: var(--accent-gold); border-radius: 10px; }
+.progress-bar-bg {
+    flex-grow: 1;
+    height: 8px;
+    background: #444;
+    border-radius: 10px;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--accent-gold);
+    border-radius: 10px;
+}

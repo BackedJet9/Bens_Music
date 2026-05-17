@@ -1,0 +1,158 @@
+/* REVIEWS ARCHIVE & HOMEPAGE GRID STYLES */
+
+.archive-header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+    color: var(--text-ash);
+}
+
+/* Plant Punk dynamic tags to filter your library by genre */
+.genre-filters span {
+    padding: 6px 16px;
+    background: var(--industrial-gray);
+    border: 1px solid var(--primary-moss);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-ash);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.genre-filters span:hover,
+.genre-filters span.active-filter {
+    background: var(--primary-moss);
+    color: var(--accent-neon);
+    border-color: var(--accent-neon);
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.3);
+}
+
+/* Music Review Layout Grid */
+.featured-media h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.song-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    flex-wrap: wrap;
+    padding: 3% 5% 5% 5%;
+}
+
+.song-card {
+    background: #161d15;
+    /* Slightly lighter muddy gray-green for internal pop */
+    padding: 2%;
+    border: 1px solid rgba(67, 92, 56, 0.4);
+    border-radius: 10px;
+    width: 28%;
+    min-width: 280px;
+    margin-bottom: 3%;
+    transition: all 0.3s ease;
+}
+
+.song-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-neon);
+    box-shadow: 0 5px 15px rgba(57, 255, 20, 0.15);
+}
+
+.album-art {
+    width: 100%;
+    border: 3px solid var(--industrial-gray);
+    border-radius: 4px;
+    margin-bottom: 5%;
+}
+
+.song-card h3 {
+    font-size: 1.3rem;
+    color: var(--accent-neon);
+    margin-bottom: 1%;
+}
+
+.review-artist {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #7b8875;
+    margin-bottom: 4%;
+    text-transform: uppercase;
+}
+
+.review-snippet {
+    font-size: 0.95rem;
+    color: var(--text-ash);
+    margin-bottom: 4%;
+}
+
+/* Custom Audio Player Controls */
+.custom-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 4% 0;
+    gap: 5%;
+    border-top: 1px solid rgba(67, 92, 56, 0.2);
+}
+
+.p-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-moss);
+    color: var(--text-ash);
+    border: 1px solid var(--accent-neon);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.p-btn:hover {
+    background: var(--accent-neon);
+    color: #000;
+    box-shadow: 0 0 10px var(--accent-neon);
+}
+
+.progress-bar-bg {
+    flex-grow: 1;
+    height: 6px;
+    background: #090c08;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--accent-neon);
+    border-radius: 10px;
+}
+
+.archive-header {
+    text-align: center;
+    padding: 5% 5% 0 5%;
+}
+
+.archive-grid-spacing {
+    padding-top: 2%;
+}
+
+.ethics-divider {
+    border-color: var(--primary-moss);
+    margin-bottom: 2%;
+}
+
+.copyright-tag {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 2%;
+}

@@ -1,23 +1,32 @@
-/* GLOBAL STYLES - 100% Preserved from your code */
+/* GLOBAL STYLES - PLANT PUNK REBOOT */
 :root {
-    --primary-red: #b30000;
-    --dark-bg: #ba1818;
-    --text-light: #f4f4f4;
-    --accent-gold: #ffd700;
-    --js-purple: #f7df1e; /* JS Yellow/Purple theme color */
+    --primary-moss: #2b4421;
+    /* Gritty, deep foliage green */
+    --dark-concrete: #121611;
+    /* Ultra-dark muddy background shade */
+    --text-ash: #e2e8df;
+    /* Pale, washed-out sage white */
+    --accent-neon: #39ff14;
+    /* Radioactive, violent neon plant green */
+    --industrial-gray: #222a20;
+    /* Muted slate green for inputs/cards */
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--dark-bg);
-    background: linear-gradient(rgba(186, 24, 24, 1) 0%, rgba(36, 9, 9, 1) 25%, rgba(57, 31, 17, 1) 60%, rgba(237, 221, 83, 1) 100%);
-    color: var(--text-light);
+    background-color: var(--dark-concrete);
+    /* Plant Punk gradient: transitioning from a dark decayed moss into heavy concrete depths */
+    background: linear-gradient(rgba(18, 22, 17, 1) 0%,
+            rgba(27, 38, 24, 1) 30%,
+            rgba(15, 18, 14, 1) 75%,
+            rgba(43, 68, 33, 1) 100%);
+    color: var(--text-ash);
     line-height: 1.6;
     width: 100%;
     overflow-x: hidden;
@@ -28,78 +37,173 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 5%; 
-    background: #000;
+    padding: 1.5% 5%;
+    background: #090c08; 
+    border-bottom: 2px solid var(--primary-moss);
     width: 100%;
+    min-width: 100%; 
 }
 
 .logo {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     gap: 1vw;
-    color: var(--accent-gold);
+    color: var(--accent-neon);
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.logo img { height: 4vh; }
+.logo img {
+    height: 5vh;
+    filter: drop-shadow(0 0 5px rgba(57, 255, 20, 0.3));
+    /* Subtle neon glow on your logo */
+}
 
-.nav-links { display: flex; list-style: none; }
-.nav-links li { margin-left: 2vw; }
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2vw;
+}
+
 .nav-links a {
-    color: var(--text-light);
+    color: var(--text-ash);
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     font-size: 1.1rem;
+    font-weight: 600;
 }
-.nav-links a:hover, .active { color: var(--accent-gold); }
 
-/* Footer Sections (Tour & Mailing List) */
-footer { padding: 3% 0; text-align: center; background: #111; }
+.nav-links a:hover,
+.active {
+    color: var(--accent-neon);
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+}
 
-.tour-table {
+/* Footer Sections (Radar Tracker & Mailing List) */
+footer {
+    padding: 5% 0 3% 0;
+    text-align: center;
+    background: #0b0e0a;
+    border-top: 3px solid var(--primary-moss);
+}
+
+.concert-table {
     width: 90%;
-    margin: 2% auto;
+    margin: 3% auto;
     border-collapse: collapse;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    background: rgba(18, 22, 17, 0.7);
+    border: 1px solid var(--primary-moss);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.tour-table th, .tour-table td {
+.concert-table th {
+    background: var(--primary-moss);
+    color: var(--accent-neon);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.concert-table th,
+.concert-table td {
     padding: 1.5%;
-    border-bottom: 1px solid var(--accent-gold);
+    border-bottom: 1px solid rgba(67, 92, 56, 0.3);
     text-align: left;
 }
 
+.concert-table tr:hover {
+    background: rgba(57, 255, 20, 0.05);
+}
+
+/* Newsletter Input and Sign Up Box */
 #mailing-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5% 2%;
+    gap: 10px;
     width: 60%;
-    margin: 2% auto;
+    margin: 3% auto;
 }
 
 #mailing-list input {
     flex: 1;
     min-width: 200px;
     padding: 1.5%;
-    border-radius: 5px;
-    border: none;
+    border-radius: 4px;
+    border: 1px solid var(--primary-moss);
+    background: var(--industrial-gray);
+    color: var(--text-ash);
+    transition: all 0.3s ease;
+}
+
+#mailing-list input:focus {
+    outline: 1px solid var(--accent-neon);
+    background: #192117;
 }
 
 #mailing-list button.cta-button {
     width: 100%;
     padding: 1.5%;
-    background-color: var(--primary-red);
-    color: var(--text-light);
-    border: 0;
-    border-radius: 5px;
+    background-color: var(--primary-moss);
+    color: var(--text-ash);
+    border: 1px solid var(--accent-neon);
+    border-radius: 4px;
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 #mailing-list button.cta-button:hover {
-    outline: 1px solid var(--accent-gold);
-    transform: translateY(-1%);
+    background-color: var(--accent-neon);
+    color: #000;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+    transform: translateY(-1px);
 }
 
-.ethics-statement { width: 80%; margin: 5% auto; font-size: 0.9rem; color: #aaa; }
+/* ICS4U Requirements Section */
+.ethics-statement {
+    width: 80%;
+    margin: 5% auto 2% auto;
+    font-size: 0.9rem;
+    color: #7b8875;
+    /* Earthy washed out green text */
+    text-align: justify;
+}
+
+@media screen and (max-width: 380px) {
+    /* Reduce container padding to clear up critical width real estate */
+    .navbar {
+        padding: 3% 4%;
+        gap: 10px;
+    }
+
+    /* Keep the logo from pushing the flexbox container wide */
+    .logo img {
+        height: auto;
+        max-width: 35px; /* Caps image size on micro devices */
+    }
+
+    .logo span {
+        font-size: 0.9rem; /* Scales text down */
+    }
+
+    /* Compress navigation link separation */
+    .nav-links li {
+        margin-left: 3vw; /* Switches to a tiny fluid margin */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem; /* Prevents overflow blowouts */
+    }
+    
+    /* Make sure form elements clamp inside the screen border */
+    #mailing-list {
+        width: 90%;
+    }
+}
