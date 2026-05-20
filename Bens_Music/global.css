@@ -1,15 +1,43 @@
 /* GLOBAL STYLES - PLANT PUNK REBOOT */
 :root {
-    --primary-moss: #2b4421;
-    /* Gritty, deep foliage green */
-    --dark-concrete: #121611;
-    /* Ultra-dark muddy background shade */
-    --text-ash: #e2e8df;
-    /* Pale, washed-out sage white */
-    --accent-neon: #39ff14;
-    /* Radioactive, violent neon plant green */
-    --industrial-gray: #222a20;
-    /* Muted slate green for inputs/cards */
+    /* === BASE INFRASTRUCTURE (BACKGROUNDS) === */
+    --dark-concrete: #121611;       /* Ultra-dark muddy background shade */
+    --smog-charcoal: #181d17;       /* Slightly lighter industrial ash for page sections */
+    --tarp-green: #1d261b;          /* Dark, oily waterproof canopy shade */
+    --rusted-iron: #201a15;         /* Deep, oxidized reddish-black for dark mode warmth */
+
+    /* === INDUSTRIAL CORE (SURFACES & CONTAINERS) === */
+    --industrial-gray: #222a20;     /* Muted slate green for inputs/cards */
+    --corrugated-zinc: #2d382b;     /* Weathered metal sheet tone for borders and dividers */
+    --diesel-slick: #384235;        /* Mid-tone oily green for button hover states */
+    --factory-rust: #4f3b2c;        /* Heavy machinery oxidized copper/brown for accents */
+
+    /* === FOLIAGE & BIOMASS (BRAND MID-TONES) === */
+    --primary-moss: #2b4421;        /* Gritty, deep foliage green */
+    --overgrowth-ivy: #395430;      /* Aggressive, spreading vine mid-tone */
+    --decayed-leaf: #535942;        /* Sickly, dried-out military olive */
+    --lichen-crust: #627254;        /* Pale, fungal green-gray for secondary text/borders */
+
+    /* === BIOLUMINESCENT OVERRIDES (NEONS & ACCENTS) === */
+    --accent-neon: #39ff14;         /* Radioactive, violent neon plant green */
+    --spore-glow: #76ff03;          /* Blindingly bright yellowish-green for ultra-high importance */
+    --toxic-sludge: #00ff66;        /* Sharp, cyber-mint green for successes and links */
+    --solar-flare: #e5ff00;         /* Electric, radioactive yellow for warnings and alerts */
+
+    /* === DATA & READOUTS (TEXT & INTERACTIVE ELEMENTS) === */
+    --text-ash: #e2e8df;            /* Pale, washed-out sage white */
+    --terminal-dim: #a4b29e;        /* Muted green-white for labels and subheadings */
+    --amber-grid: #ff9d00;          /* Warm, industrial machinery bulb glow for low-priority alerts */
+    --hazard-stripe: #e03131;       /* Fuel-leak red for critical errors and destructive actions */
+}
+
+
+@font-face {
+  font-family: 'SefaGraffiti';
+  src: url('./assets/fonts/Sefa\ \(TTF\).ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 *, *::before, *::after {
@@ -109,16 +137,16 @@ footer {
     letter-spacing: 1px;
 }
 
-.tour-table th,
-.tour-table td {
+.concert-table th,
+.concert-table td {
     padding: 1.5%;
     border-bottom: 1px solid rgba(67, 92, 56, 0.3);
     text-align: left;
 }
 
 /* FORCED COLUMN GAP: Puts a permanent margin/gap to the left of the columns */
-.tour-table th:not(:first-child),
-.tour-table td:not(:first-child) {
+.concert-table th:not(:first-child),
+.concert-table td:not(:first-child) {
     padding-left: 30px; /* Adjust this number higher or lower to get the exact gap size you want */
 }
 
