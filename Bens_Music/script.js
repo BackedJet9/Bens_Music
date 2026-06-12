@@ -19,28 +19,26 @@ if (contactForm) {
 }
 
 
-/** Audio Player Logic */
 document.addEventListener('DOMContentLoaded', () => {
     console.log("JS is linked and page is ready!");
 
     const cards = document.querySelectorAll('.song-card');
-    
-    // Check if JS even found the cards
     console.log("Found " + cards.length + " song cards.");
 
     cards.forEach((card, index) => {
         const audio = card.querySelector('.song-audio');
         const playBtn = card.querySelector('.play-trigger');
         const progressFill = card.querySelector('.progress-fill');
-        
 
-        if (!playBtn || !audio) {
-            console.error("Card " + index + " is missing a button or audio tag!");
+        // Safety check
+        if (!playBtn || !audio || !progressFill) {
+            console.error("Card " + index + " is missing vital elements (button, audio, or progress fill)!");
             return;
         }
-        // Add click listener to play/pause the audio
+
+        // Handle Play/Pause Click
         playBtn.addEventListener('click', () => {
-            console.log("Attempting to play song " + index);
+            console.log("Attempting to play song index: " + index);
             
             if (audio.paused) {
                 audio.play()
@@ -55,10 +53,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 playBtn.innerText = "▶";
             }
         });
+
         // Update progress bar as the song plays
         audio.addEventListener('timeupdate', () => {
-            const percentage = (audio.currentTime / audio.duration) * 100;
-            progressFill.style.width = percentage + "%";
+            if (audio.duration) {
+                const percentage = (audio.currentTime / audio.duration) * 100;
+                progressFill.style.width = percentage + "%";
+            }
+        });
+
+        // Reset button when audio naturally ends
+        audio.addEventListener('ended', () => {
+            playBtn.innerText = "▶";
+            progressFill.style.width = "0%";
         });
     });
+});
+
+// Slow down concert video playback rate
+document.addEventListener("DOMContentLoaded", () => {
+    const concertVideo = document.querySelector(".custom-video");
+    
+    if (concertVideo) {
+        // Sets the playback speed to 50% (half speed)
+        concertVideo.playbackRate = 0.5; 
+        
+        console.log("Concert video playback speed successfully set to slow motion (0.5x).");
+    }
 });

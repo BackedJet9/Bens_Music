@@ -3,15 +3,15 @@
 /* FIXED: Centering the Feature Tracks header */
 
 :root {
-    --primary-red: #395B24;
+    --primary-green: #395B24;
     /* Deep Moss/Army Green */
     --dark-bg: #111610;
     /* Muddy, almost-black forest green shadow */
     --text-light: #E1E8DE;
     /* Pale sage/ash white */
-    --accent-gold: #39FF14;
+    --accent-green: #39FF14;
     /* Violent Neon/Radioactive Plant Green */
-    --js-purple: #1b2e1a;
+    --js-green: #1b2e1a;
     /* Dark accent shadow green */
 }
 
@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Images/hero-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     background-size: cover;
     background-position: center;
     border-radius: 15px;
@@ -39,7 +39,7 @@
 .hero-section .cta-button {
     display: inline-block;
     padding: 1.5% 4%;
-    background: var(--primary-red);
+    background: var(--primary-green);
     color: white;
     text-decoration: none;
     margin-top: 2%;
@@ -49,7 +49,7 @@
 
 .hero-section .cta-button:hover {
     transform: translateY(-1%);
-    outline: 1px solid var(--accent-gold);
+    outline: 1px solid var(--accent-green);
 }
 
 .song-grid {
@@ -72,13 +72,14 @@
 
 .song-card:hover {
     transform: translateY(-1%);
-    outline: 1px solid var(--accent-gold);
+    outline: 1px solid var(--accent-green);
 }
 
 .album-art {
     width: 100%;
     border: 0.5vw solid #333;
     margin-bottom: 5%;
+    height: auto;
 }
 
 /* Custom Audio Player */
@@ -95,13 +96,18 @@
     width: 15%;
     aspect-ratio: 1/1;
     border-radius: 40%;
-    background: var(--primary-red);
+    background: var(--primary-green);
     color: white;
     border: none;
     font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.p-btn:hover {
+    transform: translateY(-1%);
+    outline: 1px solid var(--accent-green);
 }
 
 .progress-bar-bg {
@@ -114,6 +120,6 @@
 .progress-fill {
     width: 0%;
     height: 100%;
-    background: var(--accent-gold);
+    background: var(--accent-green);
     border-radius: 10px;
 }

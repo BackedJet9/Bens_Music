@@ -1,0 +1,382 @@
+/* ==========================================
+   PARASOMNIA DESIGN SYSTEM (:ROOT)
+   ========================================== */
+body.insomniak-review {
+    --nightmare-core: #050000;       
+    --fever-bleed: #2a0404;          
+    --abyss-surface: #0f0202;        
+
+    --rusted-vein: #3a0808;          
+    --coagulated-maroon: #2a0505;    
+    --shutter-blur-border: #5a0c0c;  
+
+    --crimson-glow: #ff3333;         
+    --fleshtone-dim: #996666;        
+    --flesh-tint: #ffcccc;           
+    
+    --motion-blur-red: #ff1a1a;      
+    --kinetic-white: #ffffff;        
+}
+
+/* ==========================================
+   THEME IMPLEMENTATION & GLOBAL LAYOUT
+   ========================================== */
+body.insomniak-review {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, var(--fever-bleed) 0%, var(--nightmare-core) 100%);
+    color: var(--flesh-tint);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body.insomniak-review .main-header {
+    width: 100%;
+    background: rgba(5, 0, 0, 0.95) !important;
+    border-bottom: 1px solid var(--rusted-vein) !important;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(5, 0, 0, 0.8) !important;
+}
+
+body.insomniak-review .navbar {
+    background: #050000 !important; 
+    border-bottom: 2px solid var(--shutter-blur-border) !important; 
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.15); 
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.insomniak-review .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+body.insomniak-review .logo img {
+    height: 40px;
+    width: auto;
+    filter: drop-shadow(0 0 8px var(--motion-blur-red)) !important; 
+}
+
+body.insomniak-review .logo span {
+    color: var(--crimson-glow) !important;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+body.insomniak-review .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+body.insomniak-review .nav-links a {
+    color: var(--fleshtone-dim) !important;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+body.insomniak-review .nav-links a:hover,
+body.insomniak-review .nav-links a.active {
+    color: var(--crimson-glow) !important;
+    text-shadow: 0 0 8px var(--motion-blur-red) !important;
+}
+
+body.insomniak-review .container {
+    max-width: 900px;
+    width: calc(100% - 40px); 
+    margin: 40px auto;
+    padding: 32px;
+    box-sizing: border-box;
+    background: rgba(15, 2, 2, 0.85);
+    border: 1px solid var(--shutter-blur-border);
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(180, 20, 20, 0.2), inset 0 0 25px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    animation: pulseGlow 8s ease-in-out infinite alternate;
+}
+
+/* Typography elements */
+body.insomniak-review h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.8rem;
+    color: var(--crimson-glow);
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.5), 3px 3px 0px #200000;
+    letter-spacing: 0.1em;
+}
+
+body.insomniak-review .subtitle {
+    margin: 0 0 32px 0;
+    color: var(--fleshtone-dim);
+    font-style: italic;
+}
+
+body.insomniak-review .section {
+    margin-bottom: 24px;
+}
+
+body.insomniak-review .section h2 {
+    margin: 0 0 12px 0;
+    font-size: 1.4rem;
+    color: var(--crimson-glow);
+    border-bottom: 1px solid var(--rusted-vein);
+    padding-bottom: 6px;
+}
+
+body.insomniak-review .section p {
+    line-height: 1.7;
+    margin: 0;
+}
+
+body.insomniak-review .focus {
+    background: rgba(255, 0, 0, 0.03);
+    border-left: 4px solid var(--motion-blur-red);
+    box-shadow: -5px 0 15px rgba(255, 26, 26, 0.1);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 40px;
+}
+
+/* ==========================================
+   INTEGRATED LEFT/RIGHT MEDIA GRID
+   ========================================== */
+body.insomniak-review .review-content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 48px; 
+    margin-top: 10px;
+}
+
+body.insomniak-review .media-block {
+    display: flex;
+    gap: 40px;            
+    align-items: flex-start;  
+    width: 100%;
+}
+
+body.insomniak-review .media-block.alternate {
+    flex-direction: row-reverse;
+}
+
+body.insomniak-review .media-side {
+    flex: 1.1; 
+    width: 100%;
+}
+
+body.insomniak-review .text-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   SONG CARDS & MEDIA PLAYER
+   ========================================== */
+body.insomniak-review .song-card {
+    background: var(--abyss-surface);
+    padding: 16px;
+    border-radius: 10px;
+    width: 100% !important;
+    box-sizing: border-box;
+    border: 1px solid var(--rusted-vein);
+    transition: all 0.3s ease;
+}
+
+body.insomniak-review .song-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--motion-blur-red);
+    box-shadow: 0 4px 15px rgba(255, 26, 26, 0.15);
+}
+
+body.insomniak-review .album-art {
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid var(--shutter-blur-border);
+    margin-bottom: 16px;
+    height: auto;
+}
+
+body.insomniak-review .custom-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 0 0 0;
+    gap: 16px;
+}
+
+body.insomniak-review .p-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    background: var(--motion-blur-red); 
+    color: #000;                        
+    border: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.insomniak-review .p-btn:hover {
+    transform: scale(1.05);
+    background: var(--kinetic-white);
+    box-shadow: 0 0 12px var(--motion-blur-red);
+}
+
+body.insomniak-review .progress-bar-bg {
+    flex-grow: 1;
+    height: 8px;
+    background: var(--coagulated-maroon);
+    border-radius: 10px;
+    border: 1px solid var(--rusted-vein);
+}
+
+body.insomniak-review .progress-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--crimson-glow); 
+    border-radius: 10px;
+}
+
+/* ==========================================
+   CONSTANT TINT HUE OVERLAY & DUAL MEDIA FIXES
+   ========================================== */
+body.insomniak-review .dual-media {
+    display: flex;
+    gap: 16px; 
+    width: 100%;
+}
+
+/* Unified style layout rules for the text-side and media boxes */
+body.insomniak-review .img-hue-wrapper {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden; 
+    border: 2px solid var(--shutter-blur-border);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Forces the video component wrapper box to retain its strict 16:9 widescreen form */
+body.insomniak-review .video-container {
+    aspect-ratio: 16 / 9;
+}
+
+/* Normalizes content images and video display vectors inside the layout boxes */
+body.insomniak-review .content-image,
+body.insomniak-review .custom-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Renders the steady light red color hue system over wrappers */
+body.insomniak-review .img-hue-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 51, 51, 0.22); 
+    mix-blend-mode: color-burn; 
+    pointer-events: none; 
+    z-index: 2;
+}
+
+/* ==========================================
+   FOOTER STRUCTURE
+   ========================================== */
+body.insomniak-review footer {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 60px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    border-top: 1px solid var(--rusted-vein) !important;
+}
+
+body.insomniak-review .ethics-statement p {
+    line-height: 1.6;
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 50px rgba(180, 20, 20, 0.15), inset 0 0 25px rgba(0, 0, 0, 0.9); }
+    100% { box-shadow: 0 0 65px rgba(180, 20, 20, 0.3), inset 0 0 25px rgba(0, 0, 0, 0.85); }
+}
+
+body.insomniak-review ::selection {
+    background: var(--motion-blur-red);
+    color: var(--nightmare-core);
+}
+
+@media (max-width: 800px) {
+    body.insomniak-review .media-block,
+    body.insomniak-review .media-block.alternate {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    body.insomniak-review .dual-media {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* ==========================================
+   DYNAMIC PORTRAIT ASPECT RATIO CONFIG
+   ========================================== */
+
+/* Target the containers holding your image and video */
+body.insomniak-review .explicit-media-size {
+    width: 100%;            
+    max-width: 415px;       
+    aspect-ratio: 415.19 / 670; 
+    margin-bottom: 32px;    
+}
+
+/* Ensure the background video container behaves properly under the custom ratio */
+body.insomniak-review .video-container.explicit-media-size {
+    height: auto;            /* Allow aspect-ratio to take control over vertical space */
+}
+
+/* Keeps media filled beautifully within the bounds without stretching or breaking */
+body.insomniak-review .explicit-media-size .content-image,
+body.insomniak-review .explicit-media-size .custom-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Remove any accidental grid layout overrides to ensure a clean vertical stack */
+body.insomniak-review .dual-media {
+    display: block !important;
+}
